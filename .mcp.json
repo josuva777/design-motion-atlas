@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@1.12.0"
+      ]
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "shadcn@2.5.0",
+        "mcp"
+      ]
+    },
+    "21st-dev": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/cli@0.2.0",
+        "mcp"
+      ]
+    },
+    "designlang": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "designlang@13.3.2",
+        "mcp"
+      ]
+    },
+    "dembrandt": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dembrandt@1.4.0",
+        "mcp"
+      ]
+    }
+  }
+}

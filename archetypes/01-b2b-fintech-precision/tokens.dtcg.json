@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "01-b2b-fintech-precision",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.985 0.003 250)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(1 0 0)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.14 0.015 255)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.48 0.012 255)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.46 0.18 250)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.89 0.006 250)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Clash Grotesk"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "Satoshi"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Commit Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "4px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.22, 1, 0.36, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "120ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "240ms"
+    }
+  }
+}

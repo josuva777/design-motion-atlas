@@ -1,0 +1,54 @@
+# recipes/ui-recipe.yaml — 4-Source Atomic DNA Mixer & Bespoke Intent Contract
+# CRITICAL RULE: Never copy a single reference website whole. Fill out this recipe before coding.
+
+project:
+  name: "[Project Name]"
+  user_vision: "[Describe the product, target audience, and core emotional tone]"
+  primary_archetype: "02-art-editorial-atelier"   # Choose from archetypes/01 through 10
+  secondary_archetype: "03-spatial-webgl-flagship"
+
+dna_sources:
+  layer_1_spatial_grid_and_rhythm:
+    source_name: "Minimal Gallery / Brutalist Websites"
+    source_url: "https://minimal.gallery/websites/"
+    extraction_cmd: "npm run extract:url -- "https://minimal.gallery/websites/""
+    adopt_traits:
+      - "Asymmetric 12-column grid (4-col sticky narrative index + 8-col exhibition stage)"
+      - "Exposed 1px structural hairlines (border-border-hairline) with >38% open museum chalk canvas"
+    reject_traits:
+      - "Static un-animated page transitions"
+
+  layer_2_typography_and_hierarchy:
+    source_name: "Fontshare + UNCUT.wtf Free Foundry Pairing"
+    source_url: "https://www.fontshare.com/"
+    adopt_traits:
+      - "Display Headline: Zodiak / Clash Display (clamp(2.75rem, 5.5vw, 5.5rem), line-height 0.95, tracking -0.03em)"
+      - "Body Copy: Satoshi / Cabinet Grotesk (max 65ch line measure)"
+      - "Technical Metadata: Commit Mono with tabular-nums enabled"
+    reject_traits:
+      - "All-caps tracked eyebrows with middle dots"
+
+  layer_3_motion_and_scroll_physics:
+    source_name: "Made for Award + Lenis Showcase"
+    source_url: "https://www.madeforaward.com/"
+    spec_file: "motion-specs/hero-curtain-reveal/spec.md"
+    adopt_traits:
+      - "Lenis smooth scroll (lerp: 0.085) synced to GSAP ScrollTrigger (start: 'top 85%')"
+      - "Clip-path inset curtain reveal (680ms, cubic-bezier(0.76, 0, 0.24, 1)) with 55ms line stagger"
+    reject_traits:
+      - "Page-blocking preloaders longer than 700ms"
+
+  layer_4_interactive_primitives_and_agent_ui:
+    source_name: "21st.dev + React Bits + Local Atlas Registry"
+    registry_items:
+      - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+      - "blocks/text-reveal/EditorialCurtainTitle.tsx"
+      - "blocks/agentic-ui/LiquidCommandBar.tsx"
+    mutations_applied:
+      - "Replaced all default colors with semantic OKLCH tokens from src/styles/globals.css"
+      - "Bound hover/focus transitions to var(--ease-out-expo)"
+
+signature_hook:
+  selected_from: "recipes/signature-hooks-library.md"
+  name: "Hook #02 — Archival Index-to-Canvas Curtain Preview"
+  implementation_notes: "Hovering an index row smoothly unmasks a floating high-res preview plate using GSAP quickTo(x, y) pointer tracking."

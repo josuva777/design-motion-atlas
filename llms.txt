@@ -1,0 +1,11 @@
+# Design Motion Atlas v5.0 (josuva777/design-motion-atlas)
+> Omni-Domain Anti-Slop Design System, Awwwards Motion Engine, Tactile Mobile Library, Programmatic Lyric/Reel Video Studio, and AG-UI/A2UI Agentic Workspace.
+## Instant Autonomous Install Commands (Top Priority)
+```bash
+npx shadcn@latest add josuva777/design-motion-atlas/all -y
+npm run init:project -- --name "MyProject" --archetype 11-kinetic-lyric-reel-studio
+```
+## Domain Capabilities & Working Samples
+- **01-10 Web, Mobile & Telemetry**: See `samples/awwwards-flagship-launch/SpatialFlagshipSample.tsx`, `samples/zomato-quick-commerce/ZomatoFoodFlowSample.tsx`, `samples/fintech-ledger-workspace/LedgerReconciliationSample.tsx`, and `samples/art-atelier-exhibition/AtelierArchiveSample.tsx`.
+- **11 Reels, Shorts & Song Lyric Videos**: See `blocks/video-studio/KineticLyricReelComposition.tsx`, `blocks/video-studio/OpusClipCaptionStage.tsx`, and `samples/lyric-reel-studio/ViralLyricReelSample.tsx`.
+- **12 Multi-Agent AG-UI & Google A2UI Surfaces**: See `blocks/agentic-ui/A2UISurfaceRenderer.tsx` and `samples/agentic-command-center/AgenticWorkspaceSample.tsx`.

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "05-luxury-commerce-editorial",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.95 0.01 75)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.98 0.005 75)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.14 0.01 50)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.45 0.01 50)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.35 0.08 45)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.86 0.01 75)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Sentient"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "General Sans"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Necto Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "2px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "450ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "850ms"
+    }
+  }
+}

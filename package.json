@@ -1,0 +1,33 @@
+{
+  "name": "design-motion-atlas",
+  "version": "5.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Omni-Domain Anti-Slop Design System, Awwwards Motion Engine, Mobile Tactile Library, Lyric/Reel Video Studio, and AG-UI/A2UI Agentic Workspace",
+  "scripts": {
+    "init:project": "node scripts/init-project.mjs",
+    "audit:slop": "node scripts/detect-slop.mjs",
+    "audit:spec": "node scripts/verify-spec.mjs",
+    "audit:all": "node scripts/detect-slop.mjs && node scripts/verify-spec.mjs",
+    "test:scanner": "node tests/run-scanner-tests.mjs",
+    "install:hooks": "node scripts/install-hooks.mjs",
+    "add:ref": "node scripts/add-reference.mjs",
+    "add:block": "node scripts/add-block.mjs",
+    "extract:url": "node scripts/extract-free.mjs"
+  },
+  "keywords": [
+    "design-system",
+    "motion-engine",
+    "anti-slop",
+    "gsap",
+    "lenis",
+    "threejs",
+    "in-app-animations",
+    "mobile-ux",
+    "ag-ui",
+    "a2ui",
+    "mcp",
+    "shadcn-registry"
+  ],
+  "license": "MIT"
+}

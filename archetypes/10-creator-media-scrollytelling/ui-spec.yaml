@@ -1,0 +1,64 @@
+# ui-spec.yaml — Machine-Verified Contract for 10-creator-media-scrollytelling
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "10-creator-media-scrollytelling"
+title: "Editorial Journalism, Audio/Video Media & Scrollytelling"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 4
+  min_whitespace_ratio: 0.3
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.13 0.008 40)"
+  elevated: "oklch(0.18 0.01 40)"
+  ink_primary: "oklch(0.94 0.008 80)"
+  ink_muted: "oklch(0.65 0.01 60)"
+  accent_primary: "oklch(0.75 0.16 70)"
+  border_hairline: "oklch(0.25 0.01 40)"
+  font_display: "Young Serif"
+  font_sans: "Satoshi"
+  font_mono: "Commit Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/hero-stage/ScrollPinnedHeroStage.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "cluttered-ad-sidebars"
+    - "auto-playing-unmuted-video"
+    - "wall-of-text-without-stage-sync"
+
+motion:
+  scroll_engine: "lenis + gsap-scrolltrigger-pin"
+  duration_min_ms: 400
+  duration_max_ms: 900
+  primary_easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

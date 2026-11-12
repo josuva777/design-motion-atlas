@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "07-kinetic-brutalist-experimental",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.97 0.005 95)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.12 0.005 95)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.11 0.005 95)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.42 0.005 95)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.62 0.24 28)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.11 0.005 95)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Outward"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "Uncut Sans"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Martian Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "0px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.25, 1, 0.5, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "80ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "220ms"
+    }
+  }
+}

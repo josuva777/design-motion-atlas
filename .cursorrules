@@ -1,0 +1,1 @@
+Always read and strictly enforce `AGENTS.md`, `reference-index/curated-sources.yaml`, `reference-index/custom-sources.yaml`, and `src/styles/globals.css` before generating or editing any frontend UI code. Run `npm run audit:all` (`node scripts/detect-slop.mjs && node scripts/verify-spec.mjs`) after every UI edit.

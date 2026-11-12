@@ -1,0 +1,65 @@
+# ui-spec.yaml — Machine-Verified Contract for 05-luxury-commerce-editorial
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "05-luxury-commerce-editorial"
+title: "Luxury E-Commerce, High Fashion & Bespoke Objects"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 2
+  min_whitespace_ratio: 0.35
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.95 0.01 75)"
+  elevated: "oklch(0.98 0.005 75)"
+  ink_primary: "oklch(0.14 0.01 50)"
+  ink_muted: "oklch(0.45 0.01 50)"
+  accent_primary: "oklch(0.35 0.08 45)"
+  border_hairline: "oklch(0.86 0.01 75)"
+  font_display: "Sentient"
+  font_sans: "General Sans"
+  font_mono: "Necto Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/in-app-sheets/SpringBottomSheetModal.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "countdown-urgency-timers"
+    - "fake-discount-popups"
+    - "heavy-drop-shadows"
+    - "star-review-clutter"
+
+motion:
+  scroll_engine: "lenis + view-transitions-api"
+  duration_min_ms: 450
+  duration_max_ms: 850
+  primary_easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

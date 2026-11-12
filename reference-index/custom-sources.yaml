@@ -1,0 +1,11 @@
+# reference-index/custom-sources.yaml
+# YOUR LIVING TREND VAULT: Add new websites, studios, or component libraries anytime!
+# Run: `npm run add:ref -- --name "Site Name" --url "https://..." --domain "02-art-editorial-atelier" --extract "What to learn from it"`
+
+custom_references:
+  - added_at: "2026-11-11"
+    name: "Minimal Gallery — Editorial Archive"
+    url: "https://minimal.gallery/websites/"
+    domain_archetype: "02-art-editorial-atelier"
+    cost: "free"
+    extract_dna: "Asymmetric editorial grid proportions, raw 0px image borders, and restrained museum-chalk typography."

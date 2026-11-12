@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "10-creator-media-scrollytelling",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.13 0.008 40)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.18 0.01 40)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.94 0.008 80)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.65 0.01 60)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.75 0.16 70)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.25 0.01 40)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Young Serif"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "Satoshi"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Commit Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "4px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "400ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "900ms"
+    }
+  }
+}

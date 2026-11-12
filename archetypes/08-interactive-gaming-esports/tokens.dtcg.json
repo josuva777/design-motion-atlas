@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "08-interactive-gaming-esports",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.09 0.015 240)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.14 0.02 240)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.96 0.01 200)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.60 0.02 240)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.78 0.18 145)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.26 0.03 220)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Panchang"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "General Sans"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Steps-Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "2px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "140ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "420ms"
+    }
+  }
+}

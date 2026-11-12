@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "02-art-editorial-atelier",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.985 0.002 240)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.955 0.004 240)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.12 0.005 240)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.45 0.01 240)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.42 0.23 262)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.86 0.005 240)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Zodiak"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "Cabinet Grotesk"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Necto Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "0px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.76, 0, 0.24, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "600ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "950ms"
+    }
+  }
+}

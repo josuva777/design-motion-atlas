@@ -1,0 +1,66 @@
+# ui-spec.yaml — Machine-Verified Contract for 03-spatial-webgl-flagship
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "03-spatial-webgl-flagship"
+title: "Spatial WebGL, 3D Product & AI Flagship Launch"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 2
+  min_whitespace_ratio: 0.32
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.10 0.01 265)"
+  elevated: "oklch(0.15 0.014 265)"
+  ink_primary: "oklch(0.96 0.005 90)"
+  ink_muted: "oklch(0.62 0.01 265)"
+  accent_primary: "oklch(0.74 0.17 55)"
+  border_hairline: "oklch(0.23 0.015 265)"
+  font_display: "Clash Display"
+  font_sans: "General Sans"
+  font_mono: "Fragment Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/shaders/InteractiveShaderHeroCanvas.tsx"
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/hero-stage/ScrollPinnedHeroStage.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "static-hero-screenshot"
+    - "unpinned-scroll-jank"
+    - "ssr-webgl-hydration-crash"
+    - "centered-3-card-row"
+
+motion:
+  scroll_engine: "lenis + gsap-scrolltrigger-scrub"
+  duration_min_ms: 500
+  duration_max_ms: 1100
+  primary_easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

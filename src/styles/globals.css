@@ -1,0 +1,216 @@
+/* src/styles/globals.css — Tailwind v4 Anti-Slop Compiler Lock + 10 Archetype Themes (v3.0) */
+@import "tailwindcss";
+
+@theme {
+  /* 1. COMPILER LOCK: Wipe all default Tailwind colors so default unapproved utility classes fail to compile */
+  --color-*: initial;
+
+  /* 2. SEMANTIC COLOR ROLES */
+  --color-surface-canvas: var(--archetype-canvas);
+  --color-surface-elevated: var(--archetype-elevated);
+  --color-ink-primary: var(--archetype-ink-primary);
+  --color-ink-secondary: var(--archetype-ink-secondary);
+  --color-ink-muted: var(--archetype-ink-muted);
+  --color-accent-primary: var(--archetype-accent-primary);
+  --color-accent-secondary: var(--archetype-accent-secondary);
+  --color-border-hairline: var(--archetype-border-hairline);
+
+  --color-status-success: oklch(0.72 0.17 152);
+  --color-status-warning: oklch(0.78 0.16 75);
+  --color-status-danger: oklch(0.64 0.21 25);
+
+  /* 3. SEMANTIC TYPOGRAPHY ROLES (100% Free Commercial Foundries: Fontshare / UNCUT.wtf / Velvetyne) */
+  --font-display: var(--archetype-font-display);
+  --font-sans: var(--archetype-font-sans);
+  --font-mono: var(--archetype-font-mono);
+
+  /* 4. MOTION PHYSICS & EASING TOKENS */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-curtain: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-snappy-ui: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --duration-micro: 160ms;
+  --duration-ui: 260ms;
+  --duration-reveal: 680ms;
+  --duration-cinematic: 1050ms;
+}
+
+/* 01: B2B / Fintech Precision */
+:root,
+[data-archetype="01-b2b-fintech-precision"] {
+  --archetype-canvas: oklch(0.985 0.003 250);
+  --archetype-elevated: oklch(1 0 0);
+  --archetype-ink-primary: oklch(0.14 0.015 255);
+  --archetype-ink-secondary: oklch(0.30 0.015 255);
+  --archetype-ink-muted: oklch(0.48 0.012 255);
+  --archetype-accent-primary: oklch(0.46 0.18 250);
+  --archetype-accent-secondary: oklch(0.22 0.03 255);
+  --archetype-border-hairline: oklch(0.89 0.006 250);
+  --archetype-font-display: "Clash Grotesk", sans-serif;
+  --archetype-font-sans: "Satoshi", sans-serif;
+  --archetype-font-mono: "Commit Mono", monospace;
+}
+
+/* 02: Art & Editorial Atelier (Museum Chalk Alabaster, Carbon Litho Ink & International Klein Cobalt — Zero Cream/Terracotta) */
+[data-archetype="02-art-editorial-atelier"] {
+  --archetype-canvas: oklch(0.985 0.002 240);
+  --archetype-elevated: oklch(0.955 0.004 240);
+  --archetype-ink-primary: oklch(0.12 0.005 240);
+  --archetype-ink-secondary: oklch(0.26 0.008 240);
+  --archetype-ink-muted: oklch(0.45 0.01 240);
+  --archetype-accent-primary: oklch(0.42 0.23 262);
+  --archetype-accent-secondary: oklch(0.18 0.01 240);
+  --archetype-border-hairline: oklch(0.86 0.005 240);
+  --archetype-font-display: "Zodiak", serif;
+  --archetype-font-sans: "Cabinet Grotesk", sans-serif;
+  --archetype-font-mono: "Necto Mono", monospace;
+}
+
+/* 03: Spatial WebGL Flagship */
+[data-archetype="03-spatial-webgl-flagship"] {
+  --archetype-canvas: oklch(0.10 0.01 265);
+  --archetype-elevated: oklch(0.15 0.014 265);
+  --archetype-ink-primary: oklch(0.96 0.005 90);
+  --archetype-ink-secondary: oklch(0.78 0.008 90);
+  --archetype-ink-muted: oklch(0.62 0.01 265);
+  --archetype-accent-primary: oklch(0.74 0.17 55);
+  --archetype-accent-secondary: oklch(0.68 0.14 210);
+  --archetype-border-hairline: oklch(0.23 0.015 265);
+  --archetype-font-display: "Clash Display", sans-serif;
+  --archetype-font-sans: "General Sans", sans-serif;
+  --archetype-font-mono: "Fragment Mono", monospace;
+}
+
+/* 04: Tactile Consumer App */
+[data-archetype="04-tactile-consumer-app"] {
+  --archetype-canvas: oklch(0.975 0.004 100);
+  --archetype-elevated: oklch(1 0 0);
+  --archetype-ink-primary: oklch(0.16 0.01 260);
+  --archetype-ink-secondary: oklch(0.32 0.01 260);
+  --archetype-ink-muted: oklch(0.50 0.01 260);
+  --archetype-accent-primary: oklch(0.58 0.20 265);
+  --archetype-accent-secondary: oklch(0.24 0.02 260);
+  --archetype-border-hairline: oklch(0.90 0.005 100);
+  --archetype-font-display: "Cabinet Grotesk", sans-serif;
+  --archetype-font-sans: "Switzer", sans-serif;
+  --archetype-font-mono: "Commit Mono", monospace;
+}
+
+/* 05: Luxury Commerce Editorial */
+[data-archetype="05-luxury-commerce-editorial"] {
+  --archetype-canvas: oklch(0.95 0.01 75);
+  --archetype-elevated: oklch(0.98 0.005 75);
+  --archetype-ink-primary: oklch(0.14 0.01 50);
+  --archetype-ink-secondary: oklch(0.28 0.01 50);
+  --archetype-ink-muted: oklch(0.45 0.01 50);
+  --archetype-accent-primary: oklch(0.35 0.08 45);
+  --archetype-accent-secondary: oklch(0.22 0.02 50);
+  --archetype-border-hairline: oklch(0.86 0.01 75);
+  --archetype-font-display: "Sentient", serif;
+  --archetype-font-sans: "General Sans", sans-serif;
+  --archetype-font-mono: "Necto Mono", monospace;
+}
+
+/* 06: Agentic Command Workspace */
+[data-archetype="06-agentic-command-workspace"] {
+  --archetype-canvas: oklch(0.12 0.01 255);
+  --archetype-elevated: oklch(0.17 0.012 255);
+  --archetype-ink-primary: oklch(0.95 0.005 255);
+  --archetype-ink-secondary: oklch(0.78 0.008 255);
+  --archetype-ink-muted: oklch(0.64 0.01 255);
+  --archetype-accent-primary: oklch(0.70 0.16 195);
+  --archetype-accent-secondary: oklch(0.62 0.14 250);
+  --archetype-border-hairline: oklch(0.25 0.012 255);
+  --archetype-font-display: "Uncut Sans", sans-serif;
+  --archetype-font-sans: "Satoshi", sans-serif;
+  --archetype-font-mono: "Fragment Mono", monospace;
+}
+
+/* 07: Kinetic Brutalist Experimental */
+[data-archetype="07-kinetic-brutalist-experimental"] {
+  --archetype-canvas: oklch(0.97 0.005 95);
+  --archetype-elevated: oklch(0.12 0.005 95);
+  --archetype-ink-primary: oklch(0.11 0.005 95);
+  --archetype-ink-secondary: oklch(0.25 0.005 95);
+  --archetype-ink-muted: oklch(0.42 0.005 95);
+  --archetype-accent-primary: oklch(0.62 0.24 28);
+  --archetype-accent-secondary: oklch(0.11 0.005 95);
+  --archetype-border-hairline: oklch(0.11 0.005 95);
+  --archetype-font-display: "Outward", sans-serif;
+  --archetype-font-sans: "Uncut Sans", sans-serif;
+  --archetype-font-mono: "Martian Mono", monospace;
+}
+
+/* 08: Interactive Gaming & Esports HUD */
+[data-archetype="08-interactive-gaming-esports"] {
+  --archetype-canvas: oklch(0.09 0.015 240);
+  --archetype-elevated: oklch(0.14 0.02 240);
+  --archetype-ink-primary: oklch(0.96 0.01 200);
+  --archetype-ink-secondary: oklch(0.76 0.015 220);
+  --archetype-ink-muted: oklch(0.60 0.02 240);
+  --archetype-accent-primary: oklch(0.78 0.18 145);
+  --archetype-accent-secondary: oklch(0.65 0.18 200);
+  --archetype-border-hairline: oklch(0.26 0.03 220);
+  --archetype-font-display: "Panchang", sans-serif;
+  --archetype-font-sans: "General Sans", sans-serif;
+  --archetype-font-mono: "Steps-Mono", monospace;
+}
+
+/* 09: Architecture & Industrial Minimal */
+[data-archetype="09-architecture-industrial-minimal"] {
+  --archetype-canvas: oklch(0.94 0.01 85);
+  --archetype-elevated: oklch(0.97 0.006 85);
+  --archetype-ink-primary: oklch(0.18 0.01 70);
+  --archetype-ink-secondary: oklch(0.32 0.01 70);
+  --archetype-ink-muted: oklch(0.47 0.01 70);
+  --archetype-accent-primary: oklch(0.45 0.11 150);
+  --archetype-accent-secondary: oklch(0.25 0.02 70);
+  --archetype-border-hairline: oklch(0.82 0.012 80);
+  --archetype-font-display: "Switzer", sans-serif;
+  --archetype-font-sans: "Switzer", sans-serif;
+  --archetype-font-mono: "Azeret Mono", monospace;
+}
+
+/* 10: Creator Media & Scrollytelling */
+[data-archetype="10-creator-media-scrollytelling"] {
+  --archetype-canvas: oklch(0.13 0.008 40);
+  --archetype-elevated: oklch(0.18 0.01 40);
+  --archetype-ink-primary: oklch(0.94 0.008 80);
+  --archetype-ink-secondary: oklch(0.78 0.01 70);
+  --archetype-ink-muted: oklch(0.65 0.01 60);
+  --archetype-accent-primary: oklch(0.75 0.16 70);
+  --archetype-accent-secondary: oklch(0.55 0.12 40);
+  --archetype-border-hairline: oklch(0.25 0.01 40);
+  --archetype-font-display: "Young Serif", serif;
+  --archetype-font-sans: "Satoshi", sans-serif;
+  --archetype-font-mono: "Commit Mono", monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-micro: 0ms;
+    --duration-ui: 0ms;
+    --duration-reveal: 120ms;
+    --duration-cinematic: 150ms;
+  }
+}
+
+[data-archetype="11-kinetic-lyric-reel-studio"] {
+  --color-surface-canvas: oklch(0.11 0.010 270);
+  --color-surface-elevated: oklch(0.16 0.015 270);
+  --color-ink-primary: oklch(0.98 0.005 90);
+  --color-ink-secondary: oklch(0.76 0.010 270);
+  --color-ink-muted: oklch(0.56 0.012 270);
+  --color-accent-primary: oklch(0.82 0.170 85);
+  --color-border-hairline: oklch(0.25 0.015 270);
+}
+[data-archetype="12-autonomous-multi-agent-canvas"] {
+  --color-surface-canvas: oklch(0.12 0.010 260);
+  --color-surface-elevated: oklch(0.17 0.012 260);
+  --color-ink-primary: oklch(0.96 0.005 90);
+  --color-ink-secondary: oklch(0.74 0.010 260);
+  --color-ink-muted: oklch(0.54 0.012 260);
+  --color-accent-primary: oklch(0.72 0.170 152);
+  --color-border-hairline: oklch(0.24 0.012 260);
+}

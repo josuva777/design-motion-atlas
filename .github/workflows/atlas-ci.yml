@@ -1,0 +1,29 @@
+name: Design Motion Atlas — Anti-Slop & Spec CI Gate
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  verify-atlas-integrity:
+    name: Zero-Slop Scanner, Spec Sync & Unit Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run 15-Rule Anti-Slop Scanner on All Blocks & Styles
+        run: npm run audit:slop
+
+      - name: Run Archetype Spec & Token Sync Verifier
+        run: npm run audit:spec
+
+      - name: Run Automated Scanner Regression Test Suite
+        run: npm run test:scanner

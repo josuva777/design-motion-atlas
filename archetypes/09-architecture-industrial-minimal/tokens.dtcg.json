@@ -1,0 +1,72 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "archetype": "09-architecture-industrial-minimal",
+  "color": {
+    "surface": {
+      "canvas": {
+        "$type": "color",
+        "$value": "oklch(0.94 0.01 85)"
+      },
+      "elevated": {
+        "$type": "color",
+        "$value": "oklch(0.97 0.006 85)"
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.18 0.01 70)"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "oklch(0.47 0.01 70)"
+      }
+    },
+    "accent": {
+      "primary": {
+        "$type": "color",
+        "$value": "oklch(0.45 0.11 150)"
+      }
+    },
+    "border": {
+      "hairline": {
+        "$type": "color",
+        "$value": "oklch(0.82 0.012 80)"
+      }
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "$type": "fontFamily",
+      "$value": "Switzer"
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "Switzer"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": "Azeret Mono"
+    }
+  },
+  "dimension": {
+    "maxBorderRadius": {
+      "$type": "dimension",
+      "$value": "0px"
+    }
+  },
+  "motion": {
+    "primaryEasing": {
+      "$type": "string",
+      "$value": "cubic-bezier(0.25, 1, 0.5, 1)"
+    },
+    "durationMin": {
+      "$type": "duration",
+      "$value": "500ms"
+    },
+    "durationMax": {
+      "$type": "duration",
+      "$value": "850ms"
+    }
+  }
+}

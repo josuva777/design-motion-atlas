@@ -1,0 +1,20 @@
+# Design Motion Atlas v5.0 — Full API, Props & Domain Work Catalog
+## 1. Domain Deliverable Catalog (Unlimited Scope Across 12 Archetypes)
+1. **01-b2b-fintech-precision**: Reconciliation workspaces, live order books, SQL/telemetry consoles, audit trails.
+2. **02-art-editorial-atelier**: Museum exhibition archives, fashion lookbooks, curatorial hover indexes, typography specimens.
+3. **03-spatial-webgl-flagship**: WebGL2 fragment shader heroes, scroll-pinned clip-path stages, 3D product launches.
+4. **04-tactile-consumer-app**: Zomato/Swiggy food delivery flows, odometer cart pills, spring bottom sheets, live status islands.
+5. **05-luxury-commerce-editorial**: High-craft retail lookbooks, bespoke product configurators, editorial drawers.
+6. **06-agentic-command-workspace**: Cmd+K liquid command bars, human-in-the-loop inline diff approvals, streaming tool states.
+7. **07-kinetic-brutalist-experimental**: Festival lineups, exposed hairline grids, high-velocity kinetic typography.
+8. **08-interactive-gaming-esports**: Esports HUD overlays, tournament brackets, loadout configurators.
+9. **09-architecture-industrial-minimal**: EV spec comparators, architectural blueprint loupes, industrial catalogs.
+10. **10-creator-media-scrollytelling**: Multi-chapter investigative journalism, pinned documentary scrollytelling.
+11. **11-kinetic-lyric-reel-studio**: 9:16 TikTok/Reels/Shorts, 16:9 YouTube song lyric videos, OpusClip/Lemo active-word caption stages, BPM bass-pulse visualizers.
+12. **12-autonomous-multi-agent-canvas**: Node-graph agent workflows (@xyflow/react), AG-UI event streaming, Google A2UI declarative JSONL surfaces.
+## 2. Core Component Props
+- `SmoothScrollProvider({ children, lerp = 0.085 })`: Drives Lenis (autoRaf: false) from gsap.ticker with lagSmoothing(0).
+- `MagneticSpringDock({ items, maxScale = 1.38 })`: Decomposed 2D X/Y spring dock with pointer capture.
+- `KineticLyricReelComposition({ title, artist, bpm = 124, aspectRatio = "9:16", currentTimeSec, lines })`: Frame-deterministic word-by-word lyric & reel composition.
+- `OpusClipCaptionStage({ clipTitle, viralityScore = 96, currentTimeSec, tokens, wordsPerChunk = 4 })`: Short-form viral active-word pill highlighter.
+- `A2UISurfaceRenderer({ surfaceId, rootId, nodes, onAction })`: Renders declarative Google A2UI widget trees into native Atlas components.

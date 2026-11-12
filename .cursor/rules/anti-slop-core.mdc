@@ -1,0 +1,12 @@
+---
+description: Universal Anti-Slop Design, Motion & Multi-Reference DNA Mixing Rules
+globs: ["**/*.tsx", "**/*.ts", "**/*.jsx", "**/*.css", "**/*.glsl", "**/*.yaml"]
+alwaysApply: true
+---
+
+# Anti-Slop Core Enforcement (Cursor / Antigravity / Windsurf)
+
+1. Read `AGENTS.md`, `src/styles/globals.css`, and the active archetype's `DESIGN.md` and `ui-spec.yaml` before writing UI code.
+2. Never clone a single reference site whole. Combine Spatial Grid (Ref A), Typography (Ref B), Motion Choreography (Ref C), and Interactive Primitives (Ref D) in `recipes/ui-recipe.yaml`.
+3. Consume only semantic CSS variables (`bg-surface-canvas`, `bg-surface-elevated`, `text-ink-primary`, `border-border-hairline`, `var(--ease-out-expo)`). Never hardcode hex values in `.tsx` files.
+4. After editing UI files, run `npm run audit:all` (`node scripts/detect-slop.mjs && node scripts/verify-spec.mjs`) and resolve any violations.

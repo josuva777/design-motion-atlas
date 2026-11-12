@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+dist/
+build/
+.next/
+design-extract-output/
+motion-specs/extracted-frames/
+*.log
+.env
+.env.*

@@ -1,0 +1,65 @@
+# ui-spec.yaml — Machine-Verified Contract for 07-kinetic-brutalist-experimental
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "07-kinetic-brutalist-experimental"
+title: "Kinetic Brutalism, Indie Culture & Music/Festival"
+
+layout_constraints:
+  grid_columns: 8
+  max_border_radius_px: 0
+  min_whitespace_ratio: 0.18
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.97 0.005 95)"
+  elevated: "oklch(0.12 0.005 95)"
+  ink_primary: "oklch(0.11 0.005 95)"
+  ink_muted: "oklch(0.42 0.005 95)"
+  accent_primary: "oklch(0.62 0.24 28)"
+  border_hairline: "oklch(0.11 0.005 95)"
+  font_display: "Outward"
+  font_sans: "Uncut Sans"
+  font_mono: "Martian Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/text-reveal/EditorialCurtainTitle.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "soft-drop-shadows"
+    - "glassmorphism-blur"
+    - "rounded-pills"
+    - "corporate-stock-photos"
+
+motion:
+  scroll_engine: "lenis-velocity-skew"
+  duration_min_ms: 80
+  duration_max_ms: 220
+  primary_easing: "cubic-bezier(0.25, 1, 0.5, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

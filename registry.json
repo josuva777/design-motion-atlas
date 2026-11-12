@@ -1,0 +1,285 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "design-motion-atlas",
+  "homepage": "https://github.com/josuva777/design-motion-atlas",
+  "items": [
+    {
+      "name": "smooth-scroll-provider",
+      "type": "registry:block",
+      "title": "Smooth Scroll Provider (Lenis + GSAP Ticker Sync)",
+      "dependencies": [
+        "lenis",
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/smooth-scroll/SmoothScrollProvider.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/SmoothScrollProvider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "editorial-curtain-title",
+      "type": "registry:block",
+      "title": "Editorial Curtain Title",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/text-reveal/EditorialCurtainTitle.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/EditorialCurtainTitle.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-pinned-hero-stage",
+      "type": "registry:block",
+      "title": "Scroll Pinned Hero Stage",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/hero-stage/ScrollPinnedHeroStage.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/ScrollPinnedHeroStage.tsx"
+        }
+      ]
+    },
+    {
+      "name": "interactive-shader-hero-canvas",
+      "type": "registry:block",
+      "title": "Interactive WebGL2 Shader Hero Canvas",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/shaders/InteractiveShaderHeroCanvas.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/InteractiveShaderHeroCanvas.tsx"
+        }
+      ]
+    },
+    {
+      "name": "archival-index-curtain-preview",
+      "type": "registry:block",
+      "title": "Archival Index Curtain Preview",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/art-atelier/ArchivalIndexCurtainPreview.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/ArchivalIndexCurtainPreview.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crosshair-telemetry-matrix",
+      "type": "registry:block",
+      "title": "Crosshair Telemetry Matrix",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/b2b-telemetry/CrosshairTelemetryMatrix.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/CrosshairTelemetryMatrix.tsx"
+        }
+      ]
+    },
+    {
+      "name": "spring-bottom-sheet-modal",
+      "type": "registry:block",
+      "title": "Spring Bottom Sheet Modal",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/in-app-sheets/SpringBottomSheetModal.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/SpringBottomSheetModal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tactile-cart-counter-pill",
+      "type": "registry:block",
+      "title": "Tactile Cart Counter Pill",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/in-app-commerce/TactileCartCounterPill.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/TactileCartCounterPill.tsx"
+        }
+      ]
+    },
+    {
+      "name": "choreographed-skeleton-loader",
+      "type": "registry:block",
+      "title": "Choreographed Skeleton Loader",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/in-app-loaders/ChoreographedSkeletonLoader.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/ChoreographedSkeletonLoader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-status-island-toast",
+      "type": "registry:block",
+      "title": "Dynamic Status Island Toast",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/in-app-feedback/DynamicStatusIslandToast.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/DynamicStatusIslandToast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "liquid-command-bar",
+      "type": "registry:block",
+      "title": "Liquid Command Bar (Cmd+K)",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "blocks/agentic-ui/LiquidCommandBar.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/LiquidCommandBar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "inline-diff-approval-card",
+      "type": "registry:block",
+      "title": "Inline Diff Approval Card (AG-UI)",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/agentic-ui/InlineDiffApprovalCard.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/InlineDiffApprovalCard.tsx"
+        }
+      ]
+    },
+    {
+      "name": "magnetic-spring-dock",
+      "type": "registry:block",
+      "title": "Magnetic Spring Dock (Decomposed 2D Springs)",
+      "dependencies": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "files": [
+        {
+          "path": "blocks/navigation/MagneticSpringDock.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/MagneticSpringDock.tsx"
+        }
+      ]
+    },
+    {
+      "name": "kinetic-lyric-reel-composition",
+      "type": "registry:block",
+      "title": "Kinetic Lyric Video & 9:16 Reel Studio Composition",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/video-studio/KineticLyricReelComposition.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/KineticLyricReelComposition.tsx"
+        }
+      ]
+    },
+    {
+      "name": "opus-clip-caption-stage",
+      "type": "registry:block",
+      "title": "OpusClip & Lemo Style Viral Caption Stage",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/video-studio/OpusClipCaptionStage.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/OpusClipCaptionStage.tsx"
+        }
+      ]
+    },
+    {
+      "name": "a2ui-surface-renderer",
+      "type": "registry:block",
+      "title": "Google A2UI & AG-UI Declarative Surface Renderer",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "blocks/agentic-ui/A2UISurfaceRenderer.tsx",
+          "type": "registry:component",
+          "target": "~/components/atlas/A2UISurfaceRenderer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "all",
+      "type": "registry:item",
+      "title": "Complete Design Motion Atlas v5.0 Suite (All 16 Blocks + Rules)",
+      "registryDependencies": [
+        "josuva777/design-motion-atlas/smooth-scroll-provider",
+        "josuva777/design-motion-atlas/editorial-curtain-title",
+        "josuva777/design-motion-atlas/scroll-pinned-hero-stage",
+        "josuva777/design-motion-atlas/interactive-shader-hero-canvas",
+        "josuva777/design-motion-atlas/archival-index-curtain-preview",
+        "josuva777/design-motion-atlas/crosshair-telemetry-matrix",
+        "josuva777/design-motion-atlas/spring-bottom-sheet-modal",
+        "josuva777/design-motion-atlas/tactile-cart-counter-pill",
+        "josuva777/design-motion-atlas/choreographed-skeleton-loader",
+        "josuva777/design-motion-atlas/dynamic-status-island-toast",
+        "josuva777/design-motion-atlas/liquid-command-bar",
+        "josuva777/design-motion-atlas/inline-diff-approval-card",
+        "josuva777/design-motion-atlas/magnetic-spring-dock",
+        "josuva777/design-motion-atlas/kinetic-lyric-reel-composition",
+        "josuva777/design-motion-atlas/opus-clip-caption-stage",
+        "josuva777/design-motion-atlas/a2ui-surface-renderer"
+      ],
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "type": "registry:file",
+          "target": "~/AGENTS.md"
+        },
+        {
+          "path": "llms.txt",
+          "type": "registry:file",
+          "target": "~/llms.txt"
+        },
+        {
+          "path": "scripts/detect-slop.mjs",
+          "type": "registry:file",
+          "target": "~/scripts/detect-slop.mjs"
+        }
+      ]
+    }
+  ]
+}

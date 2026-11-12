@@ -1,0 +1,67 @@
+# ui-spec.yaml — Machine-Verified Contract for 04-tactile-consumer-app
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "04-tactile-consumer-app"
+title: "Tactile Consumer Web & Mobile Super-App (Zomato / Swiggy / Airbnb Grade)"
+
+layout_constraints:
+  grid_columns: 4
+  max_border_radius_px: 16
+  min_whitespace_ratio: 0.2
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.975 0.004 100)"
+  elevated: "oklch(1 0 0)"
+  ink_primary: "oklch(0.16 0.01 260)"
+  ink_muted: "oklch(0.50 0.01 260)"
+  accent_primary: "oklch(0.58 0.20 265)"
+  border_hairline: "oklch(0.90 0.005 100)"
+  font_display: "Cabinet Grotesk"
+  font_sans: "Switzer"
+  font_mono: "Commit Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/in-app-commerce/TactileCartCounterPill.tsx"
+    - "blocks/in-app-sheets/SpringBottomSheetModal.tsx"
+    - "blocks/in-app-loaders/ChoreographedSkeletonLoader.tsx"
+    - "blocks/in-app-feedback/DynamicStatusIslandToast.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "raw-loading-spinner"
+    - "abrupt-modal-mount"
+    - "touch-targets-under-44px"
+    - "flat-counter-swap"
+
+motion:
+  scroll_engine: "native-momentum-with-spring-sheets"
+  duration_min_ms: 180
+  duration_max_ms: 520
+  primary_easing: "back.out(1.4)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

@@ -1,0 +1,64 @@
+# ui-spec.yaml — Machine-Verified Contract for 09-architecture-industrial-minimal
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "09-architecture-industrial-minimal"
+title: "Architecture, Industrial Design & Sustainable Engineering"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 0
+  min_whitespace_ratio: 0.36
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.94 0.01 85)"
+  elevated: "oklch(0.97 0.006 85)"
+  ink_primary: "oklch(0.18 0.01 70)"
+  ink_muted: "oklch(0.47 0.01 70)"
+  accent_primary: "oklch(0.45 0.11 150)"
+  border_hairline: "oklch(0.82 0.012 80)"
+  font_display: "Switzer"
+  font_sans: "Switzer"
+  font_mono: "Azeret Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/text-reveal/EditorialCurtainTitle.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "neon-gradients"
+    - "bouncy-cartoon-springs"
+    - "rounded-2xl-cards"
+
+motion:
+  scroll_engine: "lenis + gsap-scrolltrigger"
+  duration_min_ms: 500
+  duration_max_ms: 850
+  primary_easing: "cubic-bezier(0.25, 1, 0.5, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

@@ -1,0 +1,65 @@
+# ui-spec.yaml — Machine-Verified Contract for 06-agentic-command-workspace
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "06-agentic-command-workspace"
+title: "Integrated AI Agent & Autonomous Command Workspace"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 6
+  min_whitespace_ratio: 0.25
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.12 0.01 255)"
+  elevated: "oklch(0.17 0.012 255)"
+  ink_primary: "oklch(0.95 0.005 255)"
+  ink_muted: "oklch(0.64 0.01 255)"
+  accent_primary: "oklch(0.70 0.16 195)"
+  border_hairline: "oklch(0.25 0.012 255)"
+  font_display: "Uncut Sans"
+  font_sans: "Satoshi"
+  font_mono: "Fragment Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/agentic-ui/LiquidCommandBar.tsx"
+    - "blocks/agentic-ui/InlineDiffApprovalCard.tsx"
+    - "blocks/in-app-feedback/DynamicStatusIslandToast.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "floating-bottom-right-chat-bubble"
+    - "raw-unstyled-markdown-stream"
+    - "plain-thinking-spinner"
+
+motion:
+  scroll_engine: "native-pane-scroll"
+  duration_min_ms: 160
+  duration_max_ms: 380
+  primary_easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

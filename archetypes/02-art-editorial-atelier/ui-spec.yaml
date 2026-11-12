@@ -1,0 +1,67 @@
+# ui-spec.yaml — Machine-Verified Contract for 02-art-editorial-atelier
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "02-art-editorial-atelier"
+title: "Art Gallery, Creative Atelier & Cultural Exhibition"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 0
+  min_whitespace_ratio: 0.38
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.985 0.002 240)"
+  elevated: "oklch(0.955 0.004 240)"
+  ink_primary: "oklch(0.12 0.005 240)"
+  ink_muted: "oklch(0.45 0.01 240)"
+  accent_primary: "oklch(0.42 0.23 262)"
+  border_hairline: "oklch(0.86 0.005 240)"
+  font_display: "Zodiak"
+  font_sans: "Cabinet Grotesk"
+  font_mono: "Necto Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/art-atelier/ArchivalIndexCurtainPreview.tsx"
+    - "blocks/smooth-scroll/SmoothScrollProvider.tsx"
+    - "blocks/text-reveal/EditorialCurtainTitle.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "rounded-cards"
+    - "drop-shadows"
+    - "cream-terracotta-palette"
+    - "saas-pricing-tiers"
+    - "star-ratings"
+
+motion:
+  scroll_engine: "lenis + gsap-scrolltrigger"
+  duration_min_ms: 600
+  duration_max_ms: 950
+  primary_easing: "cubic-bezier(0.76, 0, 0.24, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0

@@ -1,0 +1,66 @@
+# ui-spec.yaml — Machine-Verified Contract for 11-kinetic-lyric-reel-studio
+# Verified automatically via `npm run audit:spec` (node scripts/verify-spec.mjs)
+version: "3.0"
+archetype: "11-kinetic-lyric-reel-studio"
+title: "Programmatic Video, 9:16 Social Reels & Kinetic Lyric Studio"
+
+layout_constraints:
+  grid_columns: 12
+  max_border_radius_px: 4
+  min_whitespace_ratio: 0.22
+  max_line_measure_ch: 65
+  minimum_touch_target_px: 44
+
+tokens:
+  canvas: "oklch(0.11 0.010 270)"
+  elevated: "oklch(0.16 0.015 270)"
+  ink_primary: "oklch(0.14 0.015 255)"
+  ink_muted: "oklch(0.48 0.012 255)"
+  accent_primary: "oklch(0.46 0.18 250)"
+  border_hairline: "oklch(0.89 0.006 250)"
+  font_display: "Clash Grotesk"
+  font_sans: "Satoshi"
+  font_mono: "Commit Mono"
+  tabular_numerals_required: true
+
+components:
+  required_atlas_blocks:
+    - "blocks/b2b-telemetry/CrosshairTelemetryMatrix.tsx"
+    - "blocks/in-app-loaders/ChoreographedSkeletonLoader.tsx"
+    - "blocks/agentic-ui/LiquidCommandBar.tsx"
+  required_interactive_states:
+    - "default"
+    - "hover"
+    - "focus-visible"
+    - "active"
+    - "disabled"
+    - "loading"
+    - "empty"
+    - "error"
+  forbidden_archetype_patterns:
+    - "centered-hero-over-3-icon-cards"
+    - "fake-macos-window-dots"
+    - "bouncy-elastic-easing"
+    - "decorative-blob-backgrounds"
+
+motion:
+  scroll_engine: "native-overflow-with-lenis-optional"
+  duration_min_ms: 120
+  duration_max_ms: 240
+  primary_easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+  scroll_trigger_start: "top 85%"
+  allowed_animated_properties: ["transform", "opacity", "clip-path"]
+  forbidden_animated_properties: ["top", "left", "width", "height", "margin", "box-shadow"]
+
+accessibility:
+  standard: "WCAG-2.2-AA"
+  min_normal_text_contrast: 4.5
+  min_large_text_contrast: 3.0
+
+quality_gates:
+  - id: "zero-slop-scanner"
+    command: "node scripts/detect-slop.mjs"
+    expected_exit_code: 0
+  - id: "spec-contract-verifier"
+    command: "node scripts/verify-spec.mjs"
+    expected_exit_code: 0
